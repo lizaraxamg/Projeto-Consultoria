@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa de Qualidade de Vida no Trabalho.</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pesquisa: Qualidade de Vida no Ambiente de Trabalho</h1>
+        <p>
+            Sua opinião é muito importante para melhorarmos o ambiente da nossa empresa. Por favor, preencha o formulário abaixo
+        </p>
+
+        <form id="pesquisaform">
+        <fieldset>
+            <legend>Informações Pessoais(Opcional)</legend>
+            <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text"  id="nome" name="'nome">
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento</label>
+                <select id="departamento" name="departamento"></select>
+                    <option value="">Selecione:</option>
+                    <option value="rh">RH</option>
+                    <option value="ti">Tecnologia da Informação</option>
+                    <option value="comercial">Comercial</option>
+                    <option value="financeiro">Financeiro</option>
+                    <option value="outros">Outros</option>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sua Percepção do Ambiente de Trabalho.</legend>
+
+            <div class="form-group">
+                <label>1. Em uma escala de 1 a 5, o quanto você se sente valorizado(a) em seu trabalho?</label>
+                <div class="radio-group">
+                    <input type="radio" id="valorizacao1" name="valorizacao" value="1" required><label for="carga1">Muito Baixa</label>
+                    <input type="radio" id="'valorizacao2" name="valorizacao" value="2"><label for="carga2">Baixa</label>
+                    <input type="radio" id="'valorizacao3" name="valorizacao" value="3"><label for="carga3">Adequada</label>
+                    <input type="radio" id="valorizacao4" name="valorizacao" value="4"><label for="carga4">Alta</label>
+                    <input type="radio" id="valorizacao5" name="'valorizacao" value="5"><label for="carga5">Muito Alta</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                    <label>2. Como você avalia a carga de trabalho atual?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="carga1" name="cargaTrabalho" value="muitoBaixa" required> <label for="carga1">Muito Baixa</label>
+                        <input type="radio" id="carga2" name="cargaTrabalho" value="baixa"> <label for="carga2">Baixa</label>
+                        <input type="radio" id="carga3" name="cargaTrabalho" value="adequada"> <label for="carga3">Adequada</label>
+                        <input type="radio" id="carga4" name="cargaTrabalho" value="alta"> <label for="carga4">Alta</label>
+                        <input type="radio" id="carga5" name="cargaTrabalho" value="muitoAlta"> <label for="carga5">Muito Alta</label>
+                    </div>
+                </div>
+
+                
+            <div class="form-group">
+                <label>3. Em uma escala de 1 a 5, como Você avalia a estrutura física oferecida  para  sua atuação profissional?</label>
+                <div class="radio-group">
+                    <input type="radio" id="estrutura1" name="estrutura-fisica" value="1" required><label for="carga1">Muito Baixa</label>
+                    <input type="radio" id="'estrutura2" name="estrutura-fisica" value="2"><label for="carga2">Baixa</label>
+                    <input type="radio" id="'estrutura3" name="estrutura-fisica" value="3"><label for="carga3">Adequada</label>
+                    <input type="radio" id="estrutura4" name="estrutura-fisica" value="4"><label for="carga4">Alta</label>
+                    <input type="radio" id="estrutura5" name="'estrutura-fisica" value="5"><label for="carga5">Muito Alta</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sugestao">4. Você tem alguma sugestão para melhorar o ambiente de trabalho e a qualidade de vida na empresa?</label>
+                <textarea id="sugestao" name="sugestao" rows="5" maxlength="500"></textarea>
+                <small>Caracteres restantes:<span id="charCount"></span></small>
+            </div>
+        </fieldset>
+
+        <button type="submit">Enviar Pesquisa</button>
+       </form>
+       <div id="feedbackMessage" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
